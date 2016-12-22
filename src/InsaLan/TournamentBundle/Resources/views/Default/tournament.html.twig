@@ -40,7 +40,8 @@
       {% endif %}
     </section>
     {% endif %}
-    <section class="results bg{% if t.shortName == "lol" %}LoL{% elseif t.shortName == "st2" %}SC2{% elseif t.shortName == "dota" %}Dota2{% elseif t.shortName == "hs" %}HS{% elseif t.shortName == "csgo" %}CSGO{% endif %}">
+    {# TODO: manage games in database and avoid this dirty thing #}
+    <section class="results" style="background: #0e0e0e url('/bundles/insalan/img/bg-{{ t.shortName | upper }}.png') no-repeat top;">
       <section class="matchs">
         {% for s in stages %}
           {% for g in s.groups %}
